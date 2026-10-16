@@ -1,0 +1,99 @@
+[data-cd-toolbar-hidden], [data-cd-toolbar-empty] {
+    display: none !important;
+}
+
+.cd-toolbar-dialog {
+    width: min(620px, calc(100vw - 48px));
+    max-height: calc(100vh - 64px);
+    padding: 24px;
+    border: 1px solid var(--border-color, #555);
+    border-radius: 12px;
+    color: var(--input-text, #eee);
+    background: var(--comfy-menu-bg, #252525);
+    font: 14px/1.5 system-ui, sans-serif;
+}
+
+.cd-toolbar-dialog::backdrop {
+    background: rgb(0 0 0 / 45%);
+}
+
+.cd-toolbar-dialog h2 {
+    margin: 0 0 12px;
+    font-size: 20px;
+}
+
+.cd-toolbar-dialog p {
+    color: var(--descrip-text, #bbb);
+}
+
+.cd-toolbar-dialog input[type="search"] {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 9px 12px;
+    margin-bottom: 12px;
+    color: inherit;
+    background: var(--comfy-input-bg, #161616);
+    border: 1px solid var(--border-color, #555);
+    border-radius: 6px;
+}
+
+.cd-toolbar-rows {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.cd-toolbar-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 6px;
+    border-bottom: 1px solid var(--border-color, #444);
+    cursor: pointer;
+}
+
+.cd-toolbar-row input {
+    flex-shrink: 0;
+    width: 17px;
+    height: 17px;
+    accent-color: #268bd2;
+}
+
+.cd-toolbar-row > span {
+    min-width: 0;
+}
+
+.cd-toolbar-name, .cd-toolbar-row small {
+    display: block;
+    overflow-wrap: anywhere;
+}
+
+.cd-toolbar-row small {
+    color: var(--descrip-text, #aaa);
+    font-size: 11px;
+}
+
+.cd-toolbar-status {
+    font-size: 12px;
+}
+
+.cd-toolbar-actions {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.cd-toolbar-actions button {
+    padding: 7px 14px;
+    color: inherit;
+    background: var(--comfy-input-bg, #333);
+    border: 1px solid var(--border-color, #555);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.cd-toolbar-dialog :focus-visible {
+    outline: 2px solid #268bd2;
+    outline-offset: 2px;
+}
