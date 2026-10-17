@@ -4,3 +4,5 @@ __pycache__/
 venv/
 .env
 .env.*
+data/task_modes.json
+data/*.tmp
