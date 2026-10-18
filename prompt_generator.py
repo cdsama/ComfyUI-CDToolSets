@@ -15,7 +15,7 @@ class PromptGeneratorAPI(io.ComfyNode):
             inputs=[
                 io.String.Input("输入提示词", multiline=True, default=""),
                 io.Combo.Input("任务模式", options=modes or ["（请先创建任务模式）"]),
-                io.Combo.Input("输出语言", options=["中文", "英文", "跟随模板"], default="中文"),
+                io.Combo.Input("输出语言", options=["中文", "英文", "跟随模板"], default="跟随模板"),
                 io.String.Input("api_key", default="local"),
                 io.String.Input("api_base_url", default="http://127.0.0.1:11434/v1"),
                 io.Combo.Input("API接口", options=["/chat/completions", "/responses"], default="/chat/completions"),
